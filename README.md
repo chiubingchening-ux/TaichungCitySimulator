@@ -38,6 +38,35 @@
 - [十八、使用規範與注意事項](#十八使用規範與注意事項)
 - [十九、版本管理原則](#十九版本管理原則)
 - [二十、致謝與專案資訊](#二十致謝與專案資訊)
+- ## 🌐 官方網站與遊玩入口
+
+歡迎來到 **台中城市模擬器（Taichung City Simulator）**！
+
+### 🏠 官方網站
+
+👉 **[點擊進入台中城市模擬器官方網站](https://chiubingchening-ux.github.io/TaichungCitySimulator/web.html#top)**
+
+官方網站是專案的主要介紹入口，方便使用者了解模擬器、瀏覽相關資訊，以及尋找不同版本的遊玩連結。
+
+### 🎮 遊戲版本
+
+| 版本 | 連結 |
+|---|---|
+| Beta V0.1 | [立即遊玩](https://chiubingchening-ux.github.io/TaichungCitySimulator/Beta%20V0.1.html) |
+| Beta V0.2 | [立即遊玩](https://chiubingchening-ux.github.io/TaichungCitySimulator/BetaV0.2.html) |
+| Beta V0.3 | [立即遊玩](https://chiubingchening-ux.github.io/TaichungCitySimulator/BetaV0.3.html) |
+| Beta V0.4 | [立即遊玩](https://chiubingchening-ux.github.io/TaichungCitySimulator/BetaV0.4.html) |
+| Formal V1.0 | [立即遊玩](https://chiubingchening-ux.github.io/TaichungCitySimulator/Formal%20V1.0.html) |
+| Beta V1.0.1 | [立即遊玩](https://chiubingchening-ux.github.io/TaichungCitySimulator/BetaV1.0.1.html) |
+
+### 💻 開發與原始碼
+
+- **GitHub 儲存庫：** [TaichungCitySimulator](https://github.com/chiubingchening-ux/TaichungCitySimulator)
+- **官方網站：** https://chiubingchening-ux.github.io/TaichungCitySimulator/web.html#top
+
+從官方網站開始探索台中城市模擬器，選擇你想體驗的版本，看看不同階段的城市交通模擬功能！
+
+---
 
 ---
 
