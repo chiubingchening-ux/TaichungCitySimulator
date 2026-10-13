@@ -32,6 +32,30 @@ html{scroll-padding-top:24px}
 ::selection{background:#6ce6ff55;color:white}
 @media(max-width:560px){.brand-logo{width:43px;height:43px}.brand-wordmark{font-size:12px}.brand-wordmark small{font-size:9px}}
 
+
+/* Version center + admin launcher */
+.version-tools{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin:0 0 22px}
+.version-search{flex:1;min-width:230px;padding:14px 16px;border:1px solid var(--line);border-radius:13px;background:#0b1929;color:var(--text);outline:none}
+.version-search:focus{border-color:var(--cyan)}
+.version-filters{display:flex;gap:8px;flex-wrap:wrap}
+.version-filters button{border:1px solid var(--line);background:#ffffff08;color:var(--muted);padding:11px 14px;border-radius:11px;cursor:pointer;transition:.2s}
+.version-filters button.active,.version-filters button:hover{color:var(--cyan);border-color:#6ce6ff88;background:#6ce6ff12}
+.version-status{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:12px;margin:0 0 18px}
+.version-group{margin:25px 0 34px}.version-group-title{display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--line);padding-bottom:13px;margin-bottom:16px}
+.version-group-title h3{margin:0;font-size:23px}.version-group-title span{font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:8px;padding:5px 8px}
+.version-empty{padding:28px;text-align:center;border:1px dashed var(--line);border-radius:16px;color:var(--muted);line-height:1.8}
+.admin-dialog{width:min(560px,calc(100% - 24px));max-height:90vh;overflow:auto;color:var(--text);background:#0d1b2d;border:1px solid #6ce6ff55;border-radius:22px;padding:24px;box-shadow:0 30px 100px #0009}
+.admin-dialog::backdrop{background:#020812c9;backdrop-filter:blur(8px)}
+.admin-dialog h2{margin:0 0 8px;font-size:25px}.admin-dialog p{color:var(--muted);font-size:13px;line-height:1.75}
+.admin-field{margin:15px 0}.admin-field label{display:block;font-size:12px;color:#b8cbe0;margin-bottom:7px}
+.admin-field input{width:100%;padding:12px 13px;border:1px solid var(--line);border-radius:11px;background:#071321;color:var(--text);outline:none}
+.admin-field input:focus{border-color:var(--cyan)}
+.admin-actions{display:flex;gap:9px;justify-content:flex-end;flex-wrap:wrap;margin-top:20px}
+.admin-note{border:1px solid #ffd78a30;background:#ffd78a08;color:#d9d5c6;padding:12px;border-radius:11px;font-size:11px;line-height:1.75;margin-top:14px}
+.admin-pill{display:inline-flex;align-items:center;gap:7px;font-size:11px;color:var(--lime);border:1px solid #a6ffbf35;border-radius:99px;padding:6px 9px;margin-bottom:14px}
+.admin-hidden{display:none!important}.admin-status{font-size:12px;white-space:pre-wrap;overflow-wrap:anywhere;color:var(--cyan);margin-top:12px}
+@media(max-width:560px){.version-tools{align-items:stretch}.version-search{min-width:100%}.version-filters button{flex:1}.admin-dialog{padding:18px}}
+
 </style>
 </head>
 <body>
@@ -57,15 +81,17 @@ html{scroll-padding-top:24px}
 
   <section id="versions"><div class="wrap">
     <div class="section-head"><div><div class="kicker">CHOOSE YOUR BUILD</div><h2>選擇遊玩版本</h2></div><p>每個版本都是通往城市的入口。點擊版本卡片即可開啟對應的遊戲頁面；如果某個版本無法載入，請回到此頁改選其他版本。</p></div>
-    <div class="versions">
-      <article class="version"><div class="vtop"><span class="tag">BETA · EARLY BUILD</span><span>01</span></div><h3>Beta V0.1</h3><p>最初期測試版本。回到模擬器的起點，體驗早期版本內容。</p><a href="https://chiubingchening-ux.github.io/TaichungCitySimulator/Beta%20V0.1.html" target="_blank" rel="noopener"><span>開始遊玩</span><span>↗</span></a></article>
-      <article class="version"><div class="vtop"><span class="tag">BETA · DEVELOPMENT</span><span>02</span></div><h3>Beta V0.2</h3><p>開發測試版本之一。適合想比較不同階段變化的玩家。</p><a href="https://chiubingchening-ux.github.io/TaichungCitySimulator/BetaV0.2.html" target="_blank" rel="noopener"><span>開始遊玩</span><span>↗</span></a></article>
-      <article class="version"><div class="vtop"><span class="tag">BETA · DEVELOPMENT</span><span>03</span></div><h3>Beta V0.3</h3><p>繼續探索開發中的城市模擬體驗。</p><a href="https://chiubingchening-ux.github.io/TaichungCitySimulator/BetaV0.3.html" target="_blank" rel="noopener"><span>開始遊玩</span><span>↗</span></a></article>
-      <article class="version"><div class="vtop"><span class="tag">BETA · DEVELOPMENT</span><span>04</span></div><h3>Beta V0.4</h3><p>較後期的 Beta 版本，看看城市計畫如何逐步演進。</p><a href="https://chiubingchening-ux.github.io/TaichungCitySimulator/BetaV0.4.html" target="_blank" rel="noopener"><span>開始遊玩</span><span>↗</span></a></article>
-      <article class="version featured"><div class="vtop"><span class="tag formal">FORMAL · RELEASE</span><span>05</span></div><h3>Formal V1.0</h3><p>正式版入口。想直接體驗正式版本，可以從這裡開始。</p><a href="https://chiubingchening-ux.github.io/TaichungCitySimulator/Formal%20V1.0.html" target="_blank" rel="noopener"><span>遊玩正式版</span><span>↗</span></a></article>
-      <article class="version"><div class="vtop"><span class="tag">BETA · UPDATE</span><span>06</span></div><h3>Beta V1.0.1</h3><p>更新測試版本。想試試不同版本的內容，就點擊進入。</p><a href="https://chiubingchening-ux.github.io/TaichungCitySimulator/BetaV1.0.1.html" target="_blank" rel="noopener"><span>開始遊玩</span><span>↗</span></a></article>
+    <div class="version-tools">
+      <input id="versionSearch" class="version-search" type="search" placeholder="搜尋版本：V1.0.6、Beta、Formal…" aria-label="搜尋版本">
+      <div class="version-filters" aria-label="版本分類">
+        <button type="button" class="active" data-version-filter="all">全部版本</button>
+        <button type="button" data-version-filter="beta">Beta 測試版</button>
+        <button type="button" data-version-filter="formal">Formal 正式版</button>
+      </div>
     </div>
-    <div class="notice"><strong>版本連結提醒</strong><span>網站會直接開啟你提供的 GitHub Pages 遊戲網址。若出現 404 或空白頁，請確認 GitHub 儲存庫中的 HTML 檔名、大小寫、空格與網址完全一致。</span></div>
+    <div class="version-status"><span id="versionStatus">正在整理版本…</span><span>顯示 <strong id="versionCount">0</strong> 個版本</span></div>
+    <div id="versionGroups"></div>
+    <div class="notice"><strong>版本管理</strong><span>版本清單會自動讀取 GitHub 公開儲存庫中的 Beta／Formal HTML 檔案並依數字排序。管理員可按 Ctrl+Z，再按 Ctrl+X 開啟管理登入。上傳需要 GitHub Token 授權。</span></div>
   </div></section>
 
   <section id="features"><div class="wrap">
@@ -79,34 +105,114 @@ html{scroll-padding-top:24px}
   <section id="about"><div class="wrap"><div class="community"><div><div class="kicker">FOLLOW THE PROJECT</div><h2>一起關注城市的下一站。</h2><p>想了解專案檔案或繼續開發？前往 GitHub 查看台中城市模擬器。</p></div><div class="community-actions"><a class="btn btn-primary" href="https://github.com/chiubingchening-ux/TaichungCitySimulator" target="_blank" rel="noopener">前往 GitHub ↗</a><a class="btn btn-quiet" href="#versions">回到版本列表 ↑</a></div></div></div></section>
 </main>
 <footer class="wrap footer"><span>© <span id="year"></span> 台中城市模擬器 · Taichung City Simulator</span><span>非官方城市資訊服務；遊戲內容以各版本實際呈現為準。</span><span><a href="#top">返回頂部 ↑</a></span></footer>
-<script>
-document.getElementById('year').textContent = new Date().getFullYear();
-// Smoothly focus the version list when the main play button is used.
-document.querySelectorAll('a[href="#versions"]').forEach(link => link.addEventListener('click', () => {
-  const target = document.getElementById('versions');
-  if (target) target.setAttribute('tabindex', '-1');
-}));
+<dialog id="adminLogin" class="admin-dialog">
+  <h2>管理員登入</h2><p>台中城市模擬器 · 管理控制台</p>
+  <form id="adminLoginForm">
+    <div class="admin-field"><label for="adminUser">管理員帳號</label><input id="adminUser" autocomplete="username" required value=""></div>
+    <div class="admin-field"><label for="adminPass">管理員密碼</label><input id="adminPass" type="password" autocomplete="current-password" required></div>
+    <div class="admin-actions"><button class="btn btn-quiet" type="button" id="closeLogin">取消</button><button class="btn btn-primary" type="submit">登入管理員</button></div>
+    <div id="loginStatus" class="admin-status" role="status"></div>
+  </form>
+</dialog>
+<dialog id="adminPanel" class="admin-dialog">
+  <div class="admin-pill">● ADMIN CONTROL CENTER</div><h2>版本管理控制台</h2>
+  <p>選擇一個或多個 HTML 遊戲檔案，並透過 GitHub API 上傳至專案根目錄。上傳成功後，首頁會自動重新讀取版本。</p>
+  <div class="admin-field"><label for="githubToken">GitHub Personal Access Token（只保存在本次頁面記憶體）</label><input id="githubToken" type="password" autocomplete="off" placeholder="github_pat_…"></div>
+  <div class="admin-field"><label for="uploadFiles">選擇遊戲 HTML 檔案（可多選）</label><input id="uploadFiles" type="file" accept=".html,.htm,text/html" multiple></div>
+  <div class="admin-field"><label for="commitMessage">提交說明</label><input id="commitMessage" value="Add Taichung City Simulator version files"></div>
+  <div class="admin-actions"><button class="btn btn-quiet" type="button" id="logoutAdmin">登出</button><button class="btn btn-quiet" type="button" id="closeAdmin">關閉</button><button class="btn btn-primary" type="button" id="uploadButton">上傳到 GitHub ↗</button></div>
+  <div id="uploadStatus" class="admin-status" role="status"></div>
+  <div class="admin-note"><strong>安全提醒：</strong>登入密碼是前端介面鎖，不是安全的伺服器驗證；任何人都能從公開 HTML 看見它。因此真正的上傳權限由 GitHub Token 保護。請建立只授權此儲存庫、Contents: Read and write 的 Fine-grained token；不要把 Token 寫進 HTML，也不要分享給別人。Token 不會寫入 localStorage，關閉管理面板會清除。</div>
+</dialog>
 
-// Lightweight reveal-on-scroll; falls back gracefully when unsupported.
-if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  const revealItems = document.querySelectorAll('.version, .feature, .community');
-  revealItems.forEach((item, index) => {
-    item.style.opacity = '0';
-    item.style.transform = 'translateY(14px)';
-    item.style.transition = 'opacity .65s ease, transform .65s cubic-bezier(.2,.8,.2,1)';
-    item.style.transitionDelay = (index % 3) * 55 + 'ms';
-  });
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12 });
-  revealItems.forEach(item => observer.observe(item));
+<script>
+'use strict';
+document.getElementById('year').textContent = new Date().getFullYear();
+const OWNER='chiubingchening-ux', REPO='TaichungCitySimulator', BRANCH='main';
+const REPO_API=`https://api.github.com/repos/${OWNER}/${REPO}`;
+const SITE_URL=`https://${OWNER}.github.io/${REPO}/`;
+const fallbackVersions=[
+ {type:'beta',version:'0.1',file:'Beta V0.1.html'},
+ {type:'beta',version:'0.2',file:'BetaV0.2.html'},
+ {type:'beta',version:'0.3',file:'BetaV0.3.html'},
+ {type:'beta',version:'0.4',file:'BetaV0.4.html'},
+ {type:'formal',version:'1.0',file:'Formal V1.0.html'},
+ {type:'beta',version:'1.0.1',file:'BetaV1.0.1.html'},
+ {type:'beta',version:'1.0.2',file:'BetaV1.0.2.html'},
+ {type:'beta',version:'1.0.3',file:'BetaV1.0.3.html'},
+ {type:'beta',version:'1.0.4',file:'BetaV1.0.4.html'},
+ {type:'beta',version:'1.0.5',file:'BetaV1.0.5.html'},
+ {type:'beta',version:'1.0.6',file:'BetaV1.0.6.html'},
+ {type:'beta',version:'1.0.8',file:'BetaV1.0.8.html'},
+ {type:'beta',version:'1.0.9',file:'BetaV1.0.9.html'},
+ {type:'beta',version:'1.1.0',file:'BetaV1.1.0.html'},
+ {type:'beta',version:'1.1.1',file:'BetaV1.1.1.html'},
+ {type:'formal',version:'1.1.2',file:'formalV1.1.2.html'}
+].map(v=>({...v,url:SITE_URL+encodeURIComponent(v.file)}));
+let allVersions=[...fallbackVersions],activeFilter='all',searchTerm='';
+const groupsEl=document.getElementById('versionGroups');
+const versionStatus=document.getElementById('versionStatus');
+const versionCount=document.getElementById('versionCount');
+function cmpVersion(a,b){const x=a.version.split('.').map(Number),y=b.version.split('.').map(Number);for(let i=0;i<Math.max(x.length,y.length);i++){const n=x[i]||0,m=y[i]||0;if(n!==m)return m-n;}return a.file.localeCompare(b.file);}
+function renderVersions(){
+ const q=searchTerm.trim().toLowerCase();
+ const items=allVersions.filter(v=>(activeFilter==='all'||v.type===activeFilter)&&[v.file,v.version,v.type,(v.type==='beta'?'Beta':'Formal')+' V'+v.version].join(' ').toLowerCase().includes(q)).sort((a,b)=>a.type===b.type?cmpVersion(a,b):(a.type==='beta'?-1:1));
+ versionCount.textContent=items.length;groupsEl.replaceChildren();
+ if(!items.length){const empty=document.createElement('div');empty.className='version-empty';empty.textContent='沒有找到符合條件的版本。';groupsEl.append(empty);return;}
+ for(const g of [{type:'beta',title:'Beta 測試版'},{type:'formal',title:'Formal 正式版'}]){
+  const subset=items.filter(v=>v.type===g.type);if(!subset.length)continue;
+  const section=document.createElement('section');section.className='version-group';
+  const heading=document.createElement('div');heading.className='version-group-title';
+  const h=document.createElement('h3');h.textContent=g.title;const count=document.createElement('span');count.textContent=subset.length+' 個版本';heading.append(h,count);
+  const grid=document.createElement('div');grid.className='versions';
+  subset.forEach((v,i)=>{const card=document.createElement('article');card.className='version'+(v.type==='formal'?' featured':'');card.style.animationDelay=Math.min(i*35,250)+'ms';
+   const top=document.createElement('div');top.className='vtop';const tag=document.createElement('span');tag.className='tag'+(v.type==='formal'?' formal':'');tag.textContent=v.type==='beta'?'BETA · TEST BUILD':'FORMAL · RELEASE';const idx=document.createElement('span');idx.textContent=String(i+1).padStart(2,'0');top.append(tag,idx);
+   const title=document.createElement('h3');title.textContent=(v.type==='beta'?'Beta':'Formal')+' V'+v.version;
+   const desc=document.createElement('p');desc.textContent=v.type==='beta'?'開發測試版本。點擊進入體驗此版本。':'正式發行版本。點擊開始遊玩。';
+   const link=document.createElement('a');link.href=v.url;link.target='_blank';link.rel='noopener';const text=document.createElement('span');text.textContent='開始遊玩';const arrow=document.createElement('span');arrow.textContent='↗';link.append(text,arrow);card.append(top,title,desc,link);grid.append(card);
+  });section.append(heading,grid);groupsEl.append(section);
+ }
 }
+document.getElementById('versionSearch').addEventListener('input',e=>{searchTerm=e.target.value;renderVersions();});
+document.querySelectorAll('[data-version-filter]').forEach(btn=>btn.addEventListener('click',()=>{activeFilter=btn.dataset.versionFilter;document.querySelectorAll('[data-version-filter]').forEach(b=>b.classList.toggle('active',b===btn));renderVersions();}));
+function parseRepoVersion(file){if(file.type!=='file'||!/^.+\.html?$/i.test(file.name))return null;const m=file.name.match(/^(beta|formal)\s*[-_ ]*\s*v?\s*(\d+(?:\.\d+)+)\s*\.html?$/i);if(!m)return null;return {type:m[1].toLowerCase(),version:m[2],file:file.name,url:SITE_URL+encodeURIComponent(file.name)};}
+async function refreshVersions(){try{const r=await fetch(`${REPO_API}/contents/?ref=${BRANCH}`,{headers:{Accept:'application/vnd.github+json'},cache:'no-store'});if(!r.ok)throw new Error('GitHub API '+r.status);const files=await r.json();const discovered=files.map(parseRepoVersion).filter(Boolean);if(discovered.length){allVersions=discovered;versionStatus.textContent='已同步 GitHub · '+new Date().toLocaleTimeString('zh-TW');}else{versionStatus.textContent='未找到符合命名規則的版本，顯示預設清單';}renderVersions();}catch(err){console.warn(err);versionStatus.textContent='GitHub 清單暫時無法讀取，顯示預設版本清單';renderVersions();}}
+refreshVersions();
+// Keyboard shortcut: press Ctrl+Z, then Ctrl+X within 1.8 seconds.
+let ctrlZAt=0;
+const loginDialog=document.getElementById('adminLogin'),panelDialog=document.getElementById('adminPanel');
+let adminUnlocked=false,githubTokenInMemory='';
+window.addEventListener('keydown',e=>{if(e.ctrlKey&&e.key.toLowerCase()==='z'){ctrlZAt=Date.now();e.preventDefault();return;}if(e.ctrlKey&&e.key.toLowerCase()==='x'&&Date.now()-ctrlZAt<1800){e.preventDefault();ctrlZAt=0;if(!loginDialog.open&&!panelDialog.open)loginDialog.showModal();}});
+document.getElementById('closeLogin').addEventListener('click',()=>loginDialog.close());
+document.getElementById('adminLoginForm').addEventListener('submit',e=>{e.preventDefault();const u=document.getElementById('adminUser').value.trim(),p=document.getElementById('adminPass').value;const status=document.getElementById('loginStatus');if(u==='admin'&&p==='admin123'){adminUnlocked=true;status.textContent='登入成功';document.getElementById('adminPass').value='';loginDialog.close();panelDialog.showModal();}else{status.textContent='帳號或密碼錯誤';}});
+function clearAdminSecrets(){githubTokenInMemory='';document.getElementById('githubToken').value='';document.getElementById('uploadFiles').value='';document.getElementById('uploadStatus').textContent='';}
+document.getElementById('closeAdmin').addEventListener('click',()=>{clearAdminSecrets();panelDialog.close();});
+document.getElementById('logoutAdmin').addEventListener('click',()=>{adminUnlocked=false;clearAdminSecrets();panelDialog.close();});
+async function githubRequest(path,token,options={}){const response=await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/contents/${path}`,{...options,headers:{Accept:'application/vnd.github+json',Authorization:`Bearer ${token}`,'X-GitHub-Api-Version':'2022-11-28',...(options.headers||{})}});let data={};try{data=await response.json();}catch{}if(!response.ok)throw new Error(data.message||`GitHub API 回應 ${response.status}`);return data;}
+function fileToBase64(file){return new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>{const result=String(reader.result);resolve(result.slice(result.indexOf(',')+1));};reader.onerror=()=>reject(new Error('無法讀取檔案：'+file.name));reader.readAsDataURL(file);});}
+document.getElementById('uploadButton').addEventListener('click',async()=>{
+ if(!adminUnlocked){alert('請先登入管理員');return;}
+ const token=document.getElementById('githubToken').value.trim();const files=[...document.getElementById('uploadFiles').files];const status=document.getElementById('uploadStatus');
+ if(!token){status.textContent='請輸入 GitHub Token。';return;}if(!files.length){status.textContent='請先選擇 HTML 檔案。';return;}
+ const invalid=files.find(f=>!/^.+\.html?$/i.test(f.name)||/^index\.html?$/i.test(f.name));if(invalid){status.textContent='檔案名稱不允許：'+invalid.name+'。只能上傳 .html/.htm 版本檔，不能覆蓋 index.html。';return;}
+ const badNames=files.filter(f=>!parseRepoVersion({type:'file',name:f.name}));if(badNames.length){status.textContent='以下檔名無法自動分類，請用「BetaV1.0.2.html」或「Formal V1.0.html」格式：\n'+badNames.map(f=>f.name).join('\n');return;}
+ const button=document.getElementById('uploadButton');button.disabled=true;status.textContent='正在確認 GitHub 權限…';
+ try{
+  // Validate token before uploading any file.
+  await githubRequest('',token,{method:'GET'});
+  for(let i=0;i<files.length;i++){
+   const file=files[i],path=encodeURIComponent(file.name).replace(/%2F/gi,'/');status.textContent=`正在上傳 ${i+1}/${files.length}：${file.name}`;
+   let sha;try{const old=await githubRequest(path,token,{method:'GET'});sha=old.sha;}catch(err){if(!String(err.message).includes('404')&&!/Not Found/i.test(err.message))throw err;}
+   const content=await fileToBase64(file);const body={message:(document.getElementById('commitMessage').value.trim()||'Add simulator version')+': '+file.name,content,branch:BRANCH};if(sha)body.sha=sha;
+   await githubRequest(path,token,{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
+  }
+  status.textContent='上傳成功！GitHub Pages 可能需要 1–3 分鐘部署。正在重新整理版本清單…';
+  await new Promise(r=>setTimeout(r,1200));await refreshVersions();status.textContent+='\n完成。';document.getElementById('uploadFiles').value='';
+ }catch(err){console.error(err);status.textContent='上傳失敗：'+err.message+'\n請確認 Token 有此儲存庫 Contents: Read and write 權限，並確認 main 分支名稱正確。';}
+ finally{button.disabled=false;}
+});
+// Existing smooth reveal animation.
+if('IntersectionObserver'in window&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){const revealItems=document.querySelectorAll('.version,.feature,.community');revealItems.forEach((item,index)=>{item.style.opacity='0';item.style.transform='translateY(14px)';item.style.transition='opacity .65s ease, transform .65s cubic-bezier(.2,.8,1)';item.style.transitionDelay=(index%3)*55+'ms';});const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.style.opacity='1';entry.target.style.transform='translateY(0)';observer.unobserve(entry.target);}});},{threshold:.12});revealItems.forEach(item=>observer.observe(item));}
 </script>
 </body>
 </html>
